@@ -1,21 +1,25 @@
 
 
-
 var products = ['fish', 'cat', 'dog', 'squirrel', 'eel'];
 var trialNumber = 0;
 var trialData = [];
 
 function pageLoad(){
 	document.getElementById('consent').style.display = 'block';
+ 
 }
 function clickConsent(){
 	document.getElementById('consent').style.display = 'none';
 	document.getElementById('instructions').style.display = 'block';
+
 }
+
 function clickInstructions(){
 	document.getElementById('instructions').style.display = 'none';
 	trialStart();
+
 }
+
 
 function trialStart(){
 	// take next product, and put in the product description.
@@ -24,6 +28,7 @@ function trialStart(){
 	document.getElementById('trialSlider').value = 500;
 
 	document.getElementById('trial').style.display = 'block';
+document.getElementById('next').disabled=true;
 }
 
 function trialDone(){
@@ -50,7 +55,4 @@ function experimentDone(){
 	window.location = 'http://www.evullab.org';
 }
 
- function moveSlider() {
-        $('#trial-button').prop('disabled',false);
-    }
 
