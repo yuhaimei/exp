@@ -1,1 +1,0 @@
-alias lr='ls -hartl'
